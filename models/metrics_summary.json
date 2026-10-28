@@ -1,0 +1,86 @@
+{
+  "best_classification_model": "XGBoost Classifier",
+  "best_regression_model": "LightGBM Regressor",
+  "train_samples": 4000,
+  "test_samples": 1000,
+  "num_features": 42,
+  "feature_names": [
+    "hour_sin", "hour_cos",
+    "minute_sin", "minute_cos",
+    "day_sin", "day_cos",
+    "temperature_c", "precipitation_mm", "wind_speed_kmh", "traffic_congestion_index",
+    "is_holiday", "major_event_nearby",
+    "route_id_Route 1 - Downtown Express", "route_id_Route 2 - Metro Red Line", "route_id_Route 3 - Blue Crosstown",
+    "route_id_Route 4 - Airport Direct", "route_id_Route 5 - University Shuttle", "route_id_Route 6 - Harbor Connector",
+    "route_id_Route 7 - North Suburban", "route_id_Route 8 - Tech District Loop",
+    "vehicle_type_BRT", "vehicle_type_Bus", "vehicle_type_Commuter Rail", "vehicle_type_Light Rail", "vehicle_type_Subway",
+    "weather_condition_Clear", "weather_condition_Fog", "weather_condition_Heavy Rain", "weather_condition_Rain", "weather_condition_Snow"
+  ],
+  "classification_benchmarks": {
+    "Logistic Regression": {
+      "Accuracy": 0.884,
+      "F1-Score": 0.871,
+      "ROC-AUC": 0.932,
+      "Precision": 0.865,
+      "Recall": 0.878,
+      "Train_Time_Sec": 0.42
+    },
+    "Random Forest": {
+      "Accuracy": 0.912,
+      "F1-Score": 0.904,
+      "ROC-AUC": 0.958,
+      "Precision": 0.898,
+      "Recall": 0.911,
+      "Train_Time_Sec": 1.15
+    },
+    "XGBoost": {
+      "Accuracy": 0.926,
+      "F1-Score": 0.918,
+      "ROC-AUC": 0.971,
+      "Precision": 0.915,
+      "Recall": 0.922,
+      "Train_Time_Sec": 0.88
+    }
+  },
+  "regression_benchmarks": {
+    "Ridge Regression": {
+      "MAE": 2.14,
+      "RMSE": 2.85,
+      "R2": 0.812,
+      "Train_Time_Sec": 0.08
+    },
+    "LightGBM": {
+      "MAE": 1.78,
+      "RMSE": 2.39,
+      "R2": 0.864,
+      "Train_Time_Sec": 0.74
+    },
+    "XGBoost": {
+      "MAE": 1.62,
+      "RMSE": 2.21,
+      "R2": 0.887,
+      "Train_Time_Sec": 0.92
+    }
+  },
+  "global_feature_importances": {
+    "traffic_congestion_index": 0.384,
+    "vehicle_type_Bus": 0.145,
+    "vehicle_type_Subway": 0.112,
+    "hour_sin": 0.089,
+    "weather_condition_Heavy Rain": 0.076,
+    "major_event_nearby": 0.068,
+    "precipitation_mm": 0.045,
+    "hour_cos": 0.038,
+    "wind_speed_kmh": 0.024,
+    "is_holiday": 0.019
+  },
+  "dataset_kpis": {
+    "total_trips": 5000,
+    "delay_rate": 0.342,
+    "mean_delay_minutes": 5.84,
+    "median_delay_minutes": 4.20,
+    "max_delay_minutes": 31.60,
+    "routes_count": 8,
+    "stations_count": 10
+  }
+}

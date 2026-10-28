@@ -1,0 +1,6 @@
+{
+  "name": "TransitFlow - ML Transport Delay & Reliability Predictor",
+  "description": "Full-stack ML platform for public transport arrival delay prediction, reliability evaluation, risk assessment, and SHAP explainability.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
